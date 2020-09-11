@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="a">x2 +
+        <input type="text" id="b">x +
+        <input type="text" id="c"> = 0
+        <button type="button" onclick="tinh();">Ket Qua</button>
+    </form>
+    <script>
+        function tinh() {
+        let a = parseInt(document.getElementById('a').value);
+        let b = parseInt(document.getElementById('b').value);
+        let c = parseInt(document.getElementById('c').value);
+        let delta = b*b - (4*a*c);
+        let candelta = Math.sqrt(delta)
+        let x1 = -b/(2*a);
+        let x2 = (-b-candelta)/(2*a);
+        let x3 = (-b+candelta)/(2*a);
+            if (delta<0) {
+                alert('Phuong Trinh Vo Nghiem');
+            }else if (delta==0) {
+                alert('x = '+x1);
+            }else {
+                alert('x1 = '+x2+' va x2 = '+x3);
+            }
+        }
+    </script>
+</body>
+</html>
